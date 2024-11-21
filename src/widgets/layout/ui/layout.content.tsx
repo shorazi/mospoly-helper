@@ -8,16 +8,19 @@ const Layout = (
 	return (
 		<div className={styles.root}>
 			<div className={styles.container}>
-				{props.children}
-
-				<div className={styles.mobile_bar}>
-					<button>Главная</button>
-					<button>Профиль</button>
-					<button>Еще</button>
-				</div>
+				<div className={styles.outlet}>{props.children}</div>
+				<MobileBar />
 			</div>
 		</div>
 	)
 }
 
 export default Layout
+
+const MobileBar = () => (
+	<div className={styles.mobile_bar}>
+		{/* <button>Главная</button>
+		<button>Профиль</button>
+		<button>Еще</button> */}
+	</div>
+)
