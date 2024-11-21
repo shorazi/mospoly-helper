@@ -3,6 +3,8 @@ import styles from './main.module.scss'
 const data = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']
 
 const MainPage = () => {
+	console.log(styles)
+
 	return (
 		<>
 			<Header />
