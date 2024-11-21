@@ -9,8 +9,8 @@ const Layout = (
 		<div className={styles.root}>
 			<div className={styles.container}>
 				<div className={styles.outlet}>{props.children}</div>
-				<MobileBar />
 			</div>
+			<MobileBar />
 		</div>
 	)
 }
