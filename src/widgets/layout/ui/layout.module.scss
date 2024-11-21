@@ -12,7 +12,6 @@
 }
 
 .container {
-	// max-width: 768px;
 	max-width: 425px;
 	width: 100%;
 	min-height: 200dvh;
@@ -27,19 +26,10 @@
 	width: 100%;
 }
 
-// .mobile_bar_container {
-// 	position: fixed;
-// 	width: 100%;
-
-// 	align-self: self-end;
-// 	display: flex;
-// 	justify-content: center;
-// 	align-items: end;
-// }
-
 .mobile_bar {
 	position: fixed;
 	align-self: self-end;
+	padding: 0 1.75rem;
 
 	max-width: 425px;
 	width: 100%;

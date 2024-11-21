@@ -19,8 +19,8 @@ export default Layout
 
 const MobileBar = () => (
 	<div className={styles.mobile_bar}>
-		{/* <button>Главная</button>
+		<button>Главная</button>
 		<button>Профиль</button>
-		<button>Еще</button> */}
+		<button>Еще</button>
 	</div>
 )
