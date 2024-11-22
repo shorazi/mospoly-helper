@@ -18,7 +18,7 @@ const Layout = (
 export default Layout
 
 const MobileBar = () => (
-	<div className={styles.mobile_bar}>
+	<div className={styles.mobile_bar + ' bg-slate-700'}>
 		<button>Главная</button>
 		<button>Профиль</button>
 		<button>Еще</button>
