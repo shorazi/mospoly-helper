@@ -7,7 +7,7 @@ const Layout = (
 ) => {
 	return (
 		<div className={styles.root}>
-			<div className={styles.container}>
+			<div className={styles.container + ' bg-slate-800'}>
 				<div className={styles.outlet}>{props.children}</div>
 			</div>
 			<MobileBar />

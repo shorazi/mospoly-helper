@@ -1,19 +1,78 @@
+// import { useState } from 'react'
 import styles from './main.module.scss'
 
-const data = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']
+interface IDateType {
+	id: number
+	value: string
+	day: string
+	fullDate: string
+}
+
+const Dates: IDateType[] = [
+	{
+		id: 1,
+		value: 'Пн',
+		day: '24',
+		fullDate: '24 мая, 15 неделя',
+	},
+	{
+		id: 2,
+		value: 'Вт',
+		day: '25',
+		fullDate: '25 мая, 15 неделя',
+	},
+	{
+		id: 3,
+		value: 'Ср',
+		day: '26',
+		fullDate: '26 мая, 15 неделя',
+	},
+	{
+		id: 4,
+		value: 'Чт',
+		day: '27',
+		fullDate: '27 мая, 15 неделя',
+	},
+	{
+		id: 5,
+		value: 'Пт',
+		day: '28',
+		fullDate: '28 мая, 15 неделя',
+	},
+	{
+		id: 6,
+		value: 'Сб',
+		day: '29',
+		fullDate: '29 мая, 15 неделя',
+	},
+	{
+		id: 7,
+		value: 'Вс',
+		day: '30',
+		fullDate: '30 мая, 15 неделя',
+	},
+	{
+		id: 8,
+		value: 'Пн',
+		day: '31',
+		fullDate: '31 мая, 15 неделя',
+	},
+]
 
 const MainPage = () => {
-	console.log(styles)
+	// const [currentDate, setCurrentDate] = useState<IDateType>(Dates[0])
 
 	return (
 		<>
 			<Header />
 			<div className={styles.scrollabel}>
-				{data.map(item => (
-					<CardDate key={item} value={item} />
-				))}
+				{Dates?.map(item => <CardDate key={item.id} date={item} />)}
 			</div>
-			<p className={styles.text_today_info}>26 мая, 15 неделя</p>
+			<div className='w-full text-end pr-5'>
+				<p className='font-light text-xs leading-0 text-gray-500'>
+					{Dates[0].fullDate}
+				</p>
+			</div>
 			<PreCard />
 			<PreCard />
 			<div>
@@ -27,18 +86,30 @@ const MainPage = () => {
 export default MainPage
 
 const Header = () => (
-	<div className={styles.header}>
-		<p>Группа 181-721</p>
+	// <div className={styles.header}>
+	<div className='w-full flex justify-start items-center py-4 px-5'>
+		<p className='font-semibold'>Группа 181-721</p>
 	</div>
 )
 
-const CardDate = (props: { value: string }) => (
-	<div className={styles.card_date}>{props.value}</div>
+const CardDate = (props: { date: IDateType; status?: boolean }) => (
+	// <div className={styles.card_date}>
+	<div className='w-14 h-16 flex flex-col justify-center items-center rounded-2xl cursor-pointer bg-slate-700 text-gray-300'>
+		<p className='font-medium text-sm leading-0'>{props.date.day}</p>
+		<p className='font-light text-xs leading-0'>{props.date.value}</p>
+		<div className='flex justify-center items-center gap-1 mt-2'>
+			<div className='w-1 h-1 rounded-[4px] bg-red-400 ' />
+			{/* <div className='w-1 h-1 rounded-[4px] bg-orange-400 ' /> */}
+			<div className='bg-orange-300 w-1 h-1 rounded-[50%]' />
+			<div className='w-1 h-1 rounded-[4px] bg-blue-300 ' />
+			<div className='bg-blue-600 w-1 h-1 rounded-[50%]' />
+		</div>
+	</div>
 )
 
 const PreCard = () => (
 	<div className={styles.precard_lesson}>
-		<p>10:30 - 11:30</p>
+		<p className='font-light text-xs leading-0 text-gray-400'>10:30 - 11:30</p>
 		<div className={styles.card_lesson}>
 			<div>
 				<p className={styles.text_lesson_type}>Лекция</p>
