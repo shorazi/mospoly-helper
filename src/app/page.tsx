@@ -1,3 +1,3 @@
-import MainPage from '@/pages/main'
+import MainPage from '@/templates/main'
 
-export default MainPage;
+export default MainPage
