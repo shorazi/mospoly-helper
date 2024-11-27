@@ -1,4 +1,4 @@
-.header {
+/* .header {
 	width: 100%;
 
 	display: flex;
@@ -6,21 +6,19 @@
 	align-items: center;
 
 	padding: 1rem 1.25rem;
-	// border: 2px solid #697689;
-}
+} */
 
 .scrollabel {
 	width: 100%;
 	padding: 0.75rem;
 	display: grid;
 	gap: 8px;
-	grid-template-columns: repeat(10, auto);
+	grid-template-columns: repeat(14, auto);
 	overflow-x: scroll;
 	scrollbar-width: none;
-	// border: 2px solid #697689;
 }
 
-.card_date {
+/* .card_date {
 	width: 70px;
 	height: 70px;
 
@@ -31,16 +29,15 @@
 	border-radius: 0.75rem;
 	background-color: #697689;
 	cursor: pointer;
-}
+} */
 
-.text_today_info {
+/* .text_today_info {
 	width: 100%;
 	padding: 0 1.25rem;
 	text-align: end;
-	// border: 2px solid #697689;
-}
+} */
 
-.precard_lesson {
+/* .precard_lesson {
 	width: 100%;
 	padding: 0.75rem 1.25rem 0;
 
@@ -49,12 +46,11 @@
 	justify-content: start;
 	align-items: start;
 	gap: 12px;
-	// border: 2px solid #697689;
-}
+} */
 
-.card_lesson {
+/* .card_lesson {
 	width: 100%;
 	background-color: #697689;
 	padding: 1rem 1.25rem;
 	border-radius: 12px;
-}
+} */

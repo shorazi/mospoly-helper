@@ -1,5 +1,6 @@
 // import { useState } from 'react'
-import styles from './main.module.scss'
+import { ReactNode } from 'react'
+import './main.css'
 
 interface ILectureType {
 	id: number
@@ -76,6 +77,30 @@ const Dates: IDateType[] = [
 		day: '31',
 		fullDate: '31 мая, 15 неделя',
 	},
+	{
+		id: 9,
+		value: 'Вт',
+		day: '1',
+		fullDate: '1 мая, 15 неделя',
+	},
+	{
+		id: 10,
+		value: 'Ср',
+		day: '2',
+		fullDate: '2 мая, 15 неделя',
+	},
+	{
+		id: 11,
+		value: 'Чт',
+		day: '3',
+		fullDate: '3 мая, 15 неделя',
+	},
+	{
+		id: 12,
+		value: 'Пт',
+		day: '4',
+		fullDate: '4 мая, 15 неделя',
+	},
 ]
 const Lessons: ILectureType[] = [
 	{
@@ -143,9 +168,9 @@ const MainPage = () => {
 	return (
 		<>
 			<Header />
-			<div className={styles.scrollabel}>
+			<Scrollabel>
 				{Dates?.map(item => <CardDate key={item.id} date={item} />)}
-			</div>
+			</Scrollabel>
 			<div className='w-full text-end pr-4'>
 				<p className='font-light text-xs leading-0 text-gray-500'>
 					{Dates[0].fullDate}
@@ -159,14 +184,12 @@ const MainPage = () => {
 export default MainPage
 
 const Header = () => (
-	// <div className={styles.header}>
 	<div className='w-full flex justify-start items-center py-4 px-6'>
 		<p className='font-semibold'>Группа 181-721</p>
 	</div>
 )
 
 const CardDate = (props: { date: IDateType; status?: boolean }) => (
-	// <div className={styles.card_date}>
 	<div className='w-12 h-16 flex flex-col justify-center items-center rounded-2xl cursor-pointer bg-slate-700 text-gray-300'>
 		<p className='font-medium text-sm leading-0'>{props.date.day}</p>
 		<p className='font-light text-xs leading-0'>{props.date.value}</p>
@@ -204,19 +227,22 @@ const PreCard = (props: { lecture: ILectureType }) => {
 					<p className='w-full text-lg font-normal leading-6'>
 						{lecture.title}
 					</p>
-					<div className={styles.lesson_more_info}>
+					<div>
 						<p className='font-light text-sm leading-0 text-gray-400'>
 							{lecture.teacher}
 						</p>
 					</div>
-					<div className={styles.lesson_more_info}>
+					<div>
 						<p className='font-light text-sm leading-0 text-gray-400'>
 							{lecture.audience}
 						</p>
 					</div>
 				</div>
 			)}
-			{/* <p className='font-light text-xs text-gray-400'>10:30 - 11:30</p> */}
 		</div>
 	)
 }
+
+const Scrollabel = (props: { children: ReactNode }) => (
+	<div className='scrollabel'>{props.children}</div>
+)

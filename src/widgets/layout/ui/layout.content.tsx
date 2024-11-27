@@ -1,4 +1,4 @@
-import styles from './layout.module.scss'
+import './layout.css'
 
 const Layout = (
 	props: Readonly<{
@@ -6,7 +6,7 @@ const Layout = (
 	}>
 ) => {
 	return (
-		<div className={styles.root}>
+		<div className='root'>
 			<div className='max-w-md w-full min-h-dvh flex flex-col relative bg-slate-800'>
 				<div className='w-full grid grid-cols-1'>{props.children}</div>
 			</div>
