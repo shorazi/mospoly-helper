@@ -95,6 +95,7 @@ export const Lessons: ILectureType[] = [
 	{
 		id: 2,
 		time: {
+			textColor: true,
 			status: 2,
 			title: 'Идет 30 мин., конец в 13:50',
 		},
@@ -112,7 +113,7 @@ export const Lessons: ILectureType[] = [
 	{
 		id: 4,
 		time: {
-			status: 2,
+			status: 7,
 			title: 'Большой перерыв',
 			description: 'У вас будет 40 минут, чтобы перекусить или отдохнуть',
 		},
@@ -132,6 +133,57 @@ export const Lessons: ILectureType[] = [
 			title: 'Физическая культура и спорт',
 			teacher: 'Бодакин А. В.',
 			audience: 'Спортивный зал',
+		},
+	},
+	{
+		id: 5,
+		time: {
+			status: 4,
+			title: '16:00 - 17:30',
+		},
+		type: {
+			name: 'Зачет',
+			id: 2,
+		},
+		lecture: {
+			deadline: '26 мая',
+			title: 'Экономика и экономическая эксплуатация',
+			teacher: 'Тингулова А. А.',
+			audience: 'Экономический зал',
+		},
+	},
+	{
+		id: 6,
+		time: {
+			status: 5,
+			title: '17:30 - 19:00',
+		},
+		type: {
+			name: 'Лекция',
+			id: 1,
+		},
+		lecture: {
+			deadline: '1,5 мес',
+			title: 'Политика и гуманитарная деятельность',
+			audience: '(Rails) Обучение в Rails',
+			teacher: 'Кишенова А. В.',
+		},
+	},
+	{
+		id: 7,
+		time: {
+			status: 6,
+			title: '19:00 - 20:30',
+		},
+		type: {
+			name: 'Лекция',
+			id: 1,
+		},
+		lecture: {
+			deadline: '1,5 мес',
+			title: 'Строительство и экономика',
+			audience: '(Rails) Обучение в Rails',
+			teacher: 'Кишенова А. В.',
 		},
 	},
 ]
