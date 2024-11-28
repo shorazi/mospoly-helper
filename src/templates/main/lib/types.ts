@@ -1,10 +1,6 @@
 export interface ILectureType {
 	id: number
-	time: {
-		status: number
-		title: string
-		description?: string
-	}
+	time: ITimeType
 	type?: {
 		name: string
 		id: number
@@ -22,4 +18,11 @@ export interface IDateType {
 	value: string
 	day: string
 	fullDate: string
+}
+
+export interface ITimeType {
+	textColor?: boolean
+	status: number
+	title: string
+	description?: string
 }

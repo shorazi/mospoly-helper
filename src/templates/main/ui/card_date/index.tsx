@@ -1,4 +1,4 @@
-import { IDateType } from '../../lib/types'
+import { IDateType } from '../../lib'
 
 const CardDate = (props: { date: IDateType; status?: boolean }) => (
 	<div className='w-12 h-16 flex flex-col justify-center items-center rounded-2xl cursor-pointer bg-slate-700 text-gray-300'>
