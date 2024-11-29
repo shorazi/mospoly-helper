@@ -1,3 +1,3 @@
-const Profile = () => <h1>hello</h1>
+import ProfilePage from '@/templates/profile'
 
-export default Profile
+export default ProfilePage

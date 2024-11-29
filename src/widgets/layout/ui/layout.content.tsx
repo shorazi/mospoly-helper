@@ -9,7 +9,7 @@ const Layout = (
 	return (
 		<div className='root'>
 			<div className='max-w-md w-full min-h-dvh flex justify-start items-start  bg-slate-800'>
-				<div className='w-full min-h-dvh grid grid-cols-1 pb-16'>
+				<div className='w-full min-h-dvh flex flex-col pb-16'>
 					{props.children}
 				</div>
 			</div>

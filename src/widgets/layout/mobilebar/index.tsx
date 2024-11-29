@@ -2,10 +2,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { memo } from 'react'
 import Icons from '../../../../public/icons'
 
-type PathType = '/' | '/profile' | '/more'
+type PathType = '/' | '/profile' | '/features'
 
 interface DataType {
 	[key: string]: {
@@ -23,7 +22,7 @@ const Data: DataType = {
 		active: Icons.triangle_active,
 		inactive: Icons.triangle,
 	},
-	'/more': {
+	'/features': {
 		active: Icons.more_active,
 		inactive: Icons.more,
 	},
@@ -38,22 +37,16 @@ const MobileBar = () => {
 	return (
 		<div className='max-w-md w-full fixed self-end px-7 h-12 flex justify-between items-center bg-slate-700'>
 			<Link href='/'>
-				<button className='bg-transparent border-0'>
-					<Image src={GetStatus(current_pathname, '/')} alt='Главная' />
-				</button>
+				<Image src={GetStatus(current_pathname, '/')} alt='Главная' />
 			</Link>
 			<Link href='/profile'>
-				<button className='bg-transparent border-0'>
-					<Image src={GetStatus(current_pathname, '/profile')} alt='Профиль' />
-				</button>
+				<Image src={GetStatus(current_pathname, '/profile')} alt='Профиль' />
 			</Link>
-			<Link href='/more'>
-				<button className='bg-transparent border-0'>
-					<Image src={GetStatus(current_pathname, '/more')} alt='Еще' />
-				</button>
+			<Link href='/features'>
+				<Image src={GetStatus(current_pathname, '/features')} alt='Еще' />
 			</Link>
 		</div>
 	)
 }
 
-export default memo(MobileBar)
+export default MobileBar
