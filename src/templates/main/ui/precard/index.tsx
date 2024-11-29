@@ -49,10 +49,7 @@ const TimeInfo = ({ time }: { time: ITimeType }) => (
 		<div className='w-full flex justify-start items-center gap-2'>
 			<div className={`bg-${colors[time?.status]} w-2 h-2 rounded-lg`} />
 			<div className='max-w-[60%]'>
-				<p
-					// className={`font-light text-xs ${time?.textColor ? `text-${colors[time?.status]}` : 'text-gray-400'}`}
-					className={`font-light text-xs text-gray-400`}
-				>
+				<p className={`font-light text-xs text-gray-400`}>
 					{time?.title || '-'}
 				</p>
 				{time?.description && (

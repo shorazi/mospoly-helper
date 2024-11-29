@@ -1,3 +1,5 @@
+import Image from 'next/image'
+import Icons from '../../../../public/icons'
 import './layout.css'
 
 const Layout = (
@@ -16,23 +18,18 @@ const Layout = (
 		</div>
 	)
 }
-// return (
-// 	<div className={styles.root}>
-// 		<div className={styles.container + ' bg-slate-800'}>
-// 			<div className={styles.outlet}>{props.children}</div>
-// 		</div>
-// 		<MobileBar />
-// 	</div>
-// )
-
 export default Layout
 
 const MobileBar = () => (
 	<div className='max-w-md w-full fixed self-end px-7 h-12 flex justify-between items-center bg-slate-700'>
-		<button>Главная</button>
-		<button>Профиль</button>
-		<button>Еще</button>
+		<button className='bg-transparent border-0'>
+			<Image src={Icons.calendar} alt='Главная' />
+		</button>
+		<button className='bg-transparent border-0'>
+			<Image src={Icons.profile} alt='Профиль' />
+		</button>
+		<button className='bg-transparent border-0'>
+			<Image src={Icons.more} alt='Еще' />
+		</button>
 	</div>
 )
-// <div className={styles.mobile_bar + ' bg-slate-700'}>
-// </div>
