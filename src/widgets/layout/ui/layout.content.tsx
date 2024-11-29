@@ -1,3 +1,4 @@
+import MobileBar from '../mobilebar'
 import './layout.css'
 
 const Layout = (
@@ -8,7 +9,7 @@ const Layout = (
 	return (
 		<div className='root'>
 			<div className='max-w-md w-full min-h-dvh flex justify-start items-start  bg-slate-800'>
-				<div className='w-full min-h-dvh grid grid-cols-1 pb-16'>
+				<div className='w-full min-h-dvh flex flex-col pb-16'>
 					{props.children}
 				</div>
 			</div>
@@ -16,23 +17,4 @@ const Layout = (
 		</div>
 	)
 }
-// return (
-// 	<div className={styles.root}>
-// 		<div className={styles.container + ' bg-slate-800'}>
-// 			<div className={styles.outlet}>{props.children}</div>
-// 		</div>
-// 		<MobileBar />
-// 	</div>
-// )
-
 export default Layout
-
-const MobileBar = () => (
-	<div className='max-w-md w-full fixed self-end px-7 h-12 flex justify-between items-center bg-slate-700'>
-		<button>Главная</button>
-		<button>Профиль</button>
-		<button>Еще</button>
-	</div>
-)
-// <div className={styles.mobile_bar + ' bg-slate-700'}>
-// </div>
