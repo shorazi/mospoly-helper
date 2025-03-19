@@ -1,7 +1,7 @@
 import { IDateType } from '../../lib'
 
 const CardDate = (props: { date: IDateType; status?: boolean }) => (
-	<div className='w-12 h-16 flex flex-col justify-center items-center rounded-2xl cursor-pointer bg-slate-700 text-gray-300'>
+	<div className='w-12 h-16 flex flex-col justify-center items-center rounded-2xl cursor-pointer bg-slate-700 hover:bg-slate-600 text-gray-300'>
 		<p className='font-medium text-sm leading-0'>{props.date.day}</p>
 		<p className='font-light text-xs leading-0'>{props.date.value}</p>
 		<div className='flex justify-center items-center gap-1 mt-2'>
