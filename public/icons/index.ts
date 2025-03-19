@@ -11,6 +11,7 @@ import more_active from './more_active.svg'
 import timer_active from './time_active.svg'
 import triangle_active from './triangle_active.svg'
 
+import arrow_left from './arrow_left.svg'
 import buildings from './buildings.svg'
 import teacher from './teacher.svg'
 
@@ -18,6 +19,7 @@ const Icons = {
 	triangle_active,
 	timer_active,
 	more_active,
+	arrow_left,
 	buildings,
 	triangle,
 	trontron,

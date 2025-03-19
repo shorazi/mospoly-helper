@@ -1,4 +1,6 @@
+'use client'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 import { ReactNode } from 'react'
 import Icons from '../../../../../public/icons'
 import { ILectureType, ITimeType } from '../../lib'
@@ -15,7 +17,6 @@ import { ILectureType, ITimeType } from '../../lib'
 
 const colors2: { [key: number]: ReactNode } = {
 	1: <div className='bg-red-400 w-[10px] h-[10px] rounded-[50%]' />,
-	// 2: <div className='bg-orange-400 w-[10px] h-[10px] rounded-[50%]' />,
 	2: <Image src={Icons.notify} alt='' />,
 	3: <div className='bg-orange-300 w-[10px] h-[10px] rounded-[50%]' />,
 	4: <div className='bg-blue-300 w-[10px] h-[10px] rounded-[50%]' />,
@@ -26,11 +27,15 @@ const colors2: { [key: number]: ReactNode } = {
 
 const PreCard = (props: { lecture: ILectureType }) => {
 	const { time, lecture, type } = props.lecture
+	const router = useRouter()
 	return (
 		<div className='w-full px-3 pt-4 flex flex-col justify-start items-start gap-3'>
 			<TimeInfo time={time} />
 			{lecture && (
-				<div className='w-full gap-2 flex flex-col justify-start items-start bg-slate-700 px-5 py-3 rounded-3xl'>
+				<div
+					onClick={() => router.push('/lesson_info')}
+					className='w-full gap-2 flex flex-col justify-start items-start bg-slate-700 hover:bg-slate-600 px-5 py-3 rounded-3xl'
+				>
 					<div className='w-full flex justify-between items-center'>
 						<p className='font-medium text-sm text-gray-300'>{type?.name}</p>
 						<p className='font-medium text-sm text-gray-300'>
