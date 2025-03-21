@@ -4,6 +4,7 @@ import { Dates, Lessons } from '../lib/data'
 import CardDate from './card_date'
 // import Header from './header'
 import { UIHeader } from '@/shared/ui'
+import Drawer from '@/widgets/layout/drawer'
 import Image from 'next/image'
 import Icons from '../../../../public/icons'
 import './main.css'
@@ -30,6 +31,7 @@ const MainPage = () => {
 				</p>
 			</div>
 			{Lessons?.map(lecture => <PreCard key={lecture.id} lecture={lecture} />)}
+			<Drawer direction='bottom' />
 		</>
 	)
 }

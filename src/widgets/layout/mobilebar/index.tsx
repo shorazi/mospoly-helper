@@ -35,7 +35,7 @@ const GetStatus = (currentpath: string, path: PathType) => {
 const MobileBar = () => {
 	const current_pathname = usePathname()
 	return (
-		<div className='max-w-md w-full fixed self-end px-7 h-12 flex justify-between items-center bg-slate-700'>
+		<div className='max-w-md w-full fixed bottom-0 left-1/2 transform -translate-x-1/2 px-7 h-12 flex justify-between items-center bg-slate-700'>
 			<Link href='/'>
 				<Image src={GetStatus(current_pathname, '/')} alt='Главная' />
 			</Link>
